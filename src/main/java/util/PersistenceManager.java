@@ -54,8 +54,8 @@ public class PersistenceManager {
          * Dados nuvem
          */
 
-         prop.put("javax.persistence.jdbc.user", "adminNshVfJW");
-         prop.put("javax.persistence.jdbc.password", "Barretos@123");
+         prop.put("javax.persistence.jdbc.user", "adminNshVfJW");       // OPENSHIFT_MYSQL_DB_USERNAME
+         prop.put("javax.persistence.jdbc.password", "Barretos@123");  //  OPENSHIFT_MYSQL_DB_PASSWORD
 
 
 
@@ -64,7 +64,7 @@ public class PersistenceManager {
          */
 
         /*
-        prop.put("javax.persistence.jdbc.user", "root");
+        prop.put("javax.persistence.jdbc.user", "root"); 
         prop.put("javax.persistence.jdbc.password", "Barretos@123");
         */
 
