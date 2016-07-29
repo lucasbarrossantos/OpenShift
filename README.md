@@ -1,5 +1,6 @@
-Este é um projeto base para quem deseja publicar sua aplicação java na nuvem usando o OpenShift
+Este é um projeto base para quem deseja publicar sua aplicação java na nuvem.
 
+#OpenShift
 #Banco: mysql
 #JSF
 #PrimeFaces
