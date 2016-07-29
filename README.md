@@ -5,6 +5,6 @@ Este é um projeto base para quem deseja publicar sua aplicação java na nuvem.
 #JSF
 #PrimeFaces
 
-<b>`Lucas Barros Santos`</b>
+<b>`Obs: A conexão não é feita local! Após a publicação seua aplicação irá se conectar ao banco que você criou no OpenShift`</b>
 
 http://openshift.github.io/documentation/oo_cartridge_guide.html#tomcat
