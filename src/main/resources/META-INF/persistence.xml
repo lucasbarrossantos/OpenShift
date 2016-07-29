@@ -6,6 +6,8 @@
 
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <properties>
+          
+          <!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://${OPENSHIFT_MYSQL_DB_HOST}:${OPENSHIFT_MYSQL_DB_PORT}/{nomeDoSeuBanco}" /> -->
 
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.5.149.2:3306/teste" />
 
