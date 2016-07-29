@@ -64,8 +64,8 @@ public class PersistenceManager {
          */
 
         /*
-        prop.put("javax.persistence.jdbc.user", "root"); 
-        prop.put("javax.persistence.jdbc.password", "******");
+        prop.put("javax.persistence.jdbc.user", "root");          // USERNAME_LOCAL
+        prop.put("javax.persistence.jdbc.password", "******");   //  PASSWORD_LOCAL
         */
 
         return (HashMap<String, Object>) prop;
