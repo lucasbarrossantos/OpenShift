@@ -4,7 +4,7 @@ Este é um projeto base para quem deseja publicar sua app java na nuvem
 #JSF
 #PrimeFaces
 
---Lucas Barros Santos
+<b>Lucas Barros Santos</b>
 
 The OpenShift `jbossews` cartridge documentation can be found at:
 
