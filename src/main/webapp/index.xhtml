@@ -1,0 +1,99 @@
+<ui:composition template="WEB-INF/templates/Layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui" xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions">
+
+    <ui:define name="corpo">
+
+        <f:metadata>
+            <f:viewAction action="#{index.consultar}"/>
+        </f:metadata>
+
+        <p:panel>
+            <h:outputText value="#{index.mensagem}"/>
+        </p:panel>
+
+        <p:separator/>
+
+        <h:form id="frm">
+
+            <p:messages id="msgs"/>
+
+            <p:toolbar id="toolbar">
+                <f:facet name="left">
+                    <p:commandButton value="Novo aluno" icon="ui-icon-disk"
+                                     oncomplete="PF('itemDialog').show()"
+                                     process="@this" update="itemPanel">
+                        <p:resetInput target="itemPanel"/>
+                    </p:commandButton>
+
+                    <span class="ui-separator">
+						<span class="ui-icon ui-icon-grip-dotted-vertical"/>
+            		</span>
+
+                    <p:commandButton title="Remover" icon="ui-icon-trash"
+                                     disabled="#{index.alunoSelecionado == null}"
+                                     process="@this"
+                                     action="#{index.remover}">
+                        <p:confirm icon="ui-icon-alert" header="Confirmação de exclusão"
+                                   message="Tem certeza que deseja excluir o Aluno?"/>
+                    </p:commandButton>
+                </f:facet>
+            </p:toolbar>
+
+            <p:dataTable id="itensTable" value="#{index.alunos}" var="al"
+                         emptyMessage="Sem Alunos." rows="10" paginator="true" paginatorPosition="bottom"
+                         reflow="true" selection="#{index.alunoSelecionado}" selectionMode="single"
+                         style="margin-top: 10px" rowKey="#{al.id}">
+
+                <p:ajax event="rowSelect" update=":frm:toolbar"/>
+                <p:ajax event="rowUnselect" update=":frm:toolbar"/>
+
+                <p:column headerText="#">
+                    <h:outputText value="#{al.id}"/>
+                </p:column>
+
+                <p:column headerText="Nome">
+                    <h:outputText value="#{al.nome}"/>
+                </p:column>
+
+                <p:column headerText="Matricula">
+                    <h:outputText value="#{al.matricula}"/>
+                </p:column>
+
+            </p:dataTable>
+
+            <p:dialog widgetVar="itemDialog" header="Novo Aluno"
+                      resizable="false" style="min-width: 300px" responsive="true">
+
+                <h:panelGroup id="itemPanel" layout="block" styleClass="ui-fluid">
+                    <p:messages id="msgDialog" autoUpdate="false"/>
+
+                    <p:panelGrid columns="2" layout="grid" styleClass="panelgrid-noborder"
+                                 columnClasses="ui-grid-col-4, ui-grid-col-8">
+
+                        <p:outputLabel value="Nome" for="nome"/>
+                        <p:inputText id="nome" value="#{index.aluno.nome}"/>
+
+                        <p:outputLabel value="Matricula" for="matricula"/>
+                        <p:inputText id="matricula" value="#{index.aluno.matricula}"/>
+
+
+                        <p:outputLabel/>
+                        <p:commandButton value="Adicionar" icon="ui-icon-disk"
+                                         action="#{index.salvar}"
+                                         process="itemPanel" update="itemPanel frm:itensTable"
+                                         oncomplete="if (!args.validationFailed) PF('itemDialog').hide()"/>
+
+                    </p:panelGrid>
+
+                </h:panelGroup>
+
+            </p:dialog>
+
+        </h:form>
+
+    </ui:define>
+</ui:composition>

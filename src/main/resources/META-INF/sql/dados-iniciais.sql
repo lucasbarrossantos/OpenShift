@@ -1,0 +1,1 @@
+insert into Aluno (id, nome, matricula) values (1, 'Lucas Barros Santos', 14918);
