@@ -55,7 +55,7 @@ public class PersistenceManager {
          */
 
          prop.put("javax.persistence.jdbc.user", "adminNshVfJW");       // OPENSHIFT_MYSQL_DB_USERNAME
-         prop.put("javax.persistence.jdbc.password", "******");  //  OPENSHIFT_MYSQL_DB_PASSWORD
+         prop.put("javax.persistence.jdbc.password", "******");        //  OPENSHIFT_MYSQL_DB_PASSWORD
 
 
 
