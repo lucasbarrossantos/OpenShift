@@ -1,4 +1,4 @@
-Este é um projeto base para quem deseja publicar sua app java na nuvem
+Este é um projeto base para quem deseja publicar sua aplicação java na nuvem usando o OpenShift
 
 #Banco: mysql
 #JSF
