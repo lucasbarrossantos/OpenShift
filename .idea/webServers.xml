@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="38674b9d-8bed-4225-8b6e-34412c04dc16" name="ssh://5841978789f5cf6e68000008@videoaulaopenshift-cestabasica.rhcloud.com/~/git/videoaulaopenshift.git/">
+        <fileTransfer port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
