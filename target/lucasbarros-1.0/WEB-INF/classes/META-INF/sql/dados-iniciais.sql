@@ -1,1 +1,1 @@
-insert into A (id, nome, matricula) values (CURRENT_DATE , 'Admin', '70.311.193/0001-87', 'Mercado do João', 'João Mercado e Distribuidor de Alimentos Ltda', 'LTDA', '2009-03-02');
+insert into Aluno (id, nome, matricula) values (1, 'Lucas Barros Santos', 14918);
